@@ -17,7 +17,7 @@ import {
   CircularProgress,
   Tooltip as ChakraTip
 } from '@chakra-ui/react'
-import { ApiV3Token, SOL_INFO, SOLMint, TokenInfo, TransferFeeDataBaseType } from 'bifido-sdk'
+import { ApiV3Token, SOL_INFO, SOLMint, TokenInfo, TransferFeeDataBaseType, PONZIMONMint } from 'bifido-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -45,7 +45,6 @@ import { debounce } from '@/utils/functionMethods'
 import QuestionCircleIcon from '@/icons/misc/QuestionCircleIcon'
 import Tooltip from '@/components/Tooltip'
 
-export const METAVMint = new PublicKey('HCgvbV9Qcf9TVGPGKMGbVEj8WwwVD6HhTt5E2i3qkeN9')
 export function SwapPanel({
   onInputMintChange,
   onOutputMintChange,
@@ -78,7 +77,7 @@ export function SwapPanel({
   const [inputMint, setInputMint] = useState<string>(SOLMint.toBase58())
   const [swapType, setSwapType] = useState<'BaseIn' | 'BaseOut'>('BaseIn')
 
-  const [outputMint, setOutputMint] = useState<string>('mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM')
+  const [outputMint, setOutputMint] = useState<string>(PONZIMONMint.toBase58())
   const [tokenInput, tokenOutput] = [tokenMap.get(inputMint), tokenMap.get(outputMint)]
   const [cacheLoaded, setCacheLoaded] = useState(false)
   const isTokenLoaded = tokenMap.size > 0

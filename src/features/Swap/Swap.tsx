@@ -1,5 +1,5 @@
 import { Box, Grid, GridItem, HStack, Text, VStack, useClipboard } from '@chakra-ui/react'
-import { RAYMint, SOLMint } from 'bifido-sdk'
+import { RAYMint, SOLMint, PONZIMONMint } from 'bifido-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -18,7 +18,7 @@ import { getSwapPairCache, setSwapPairCache } from './util'
 import { SwapKlinePanel } from './components/SwapKlinePanel'
 import { SwapKlinePanelMobileDrawer } from './components/SwapKlinePanelMobileDrawer'
 import { SwapKlinePanelMobileThumbnail } from './components/SwapKlinePanelMobileThumbnail'
-import { METAVMint, SwapPanel } from './components/SwapPanel'
+import { SwapPanel } from './components/SwapPanel'
 import { TimeType } from '@/hooks/pool/useFetchPoolKLine'
 import { SlippageAdjuster } from '@/components/SlippageAdjuster'
 import { getMintPriority } from '@/utils/token'
@@ -31,7 +31,7 @@ import BackgroundAnimation from '@/components/BackgroundAnimation'
 export default function Swap() {
   // const { inputMint: cacheInput, outputMint: cacheOutput } = getSwapPairCache()
   const [inputMint, setInputMint] = useState<string>(SOLMint.toBase58())
-  const [outputMint, setOutputMint] = useState<string>('mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM')
+  const [outputMint, setOutputMint] = useState<string>(PONZIMONMint.toBase58())
   const [isPCChartShown, setIsPCChartShown] = useState<boolean>(false)
   const [isMobileChartShown, setIsMobileChartShown] = useState<boolean>(false)
   const [isChartLeft, setIsChartLeft] = useState<boolean>(true)
