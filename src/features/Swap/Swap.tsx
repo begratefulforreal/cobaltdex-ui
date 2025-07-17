@@ -30,8 +30,8 @@ import BackgroundAnimation from '@/components/BackgroundAnimation'
 
 export default function Swap() {
   // const { inputMint: cacheInput, outputMint: cacheOutput } = getSwapPairCache()
-  const [inputMint, setInputMint] = useState<string>(PublicKey.default.toBase58())
-  const [outputMint, setOutputMint] = useState<string>(METAVMint.toBase58())
+  const [inputMint, setInputMint] = useState<string>(SOLMint.toBase58())
+  const [outputMint, setOutputMint] = useState<string>('mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM')
   const [isPCChartShown, setIsPCChartShown] = useState<boolean>(false)
   const [isMobileChartShown, setIsMobileChartShown] = useState<boolean>(false)
   const [isChartLeft, setIsChartLeft] = useState<boolean>(true)
@@ -112,37 +112,39 @@ export default function Swap() {
       mt={[0, getVHExpression([0, 800], [32, 1300])]}
       width={!isMobile && isPCChartShown ? 'min(100%, 1300px)' : undefined}
     >
-      <BackgroundAnimation> {/* diamond shapes 3js */}
-      <Grid
-        width="full"
-        gridTemplate={[
-          `
+      <BackgroundAnimation>
+        {' '}
+        {/* diamond shapes 3js */}
+        <Grid
+          width="full"
+          gridTemplate={[
+            `
             "controls" auto
             "panel" auto
             "kline" auto / auto
           `,
-          isPCChartShown
-            ? isChartLeft
-              ? `". controls" auto "kline  panel" auto / 1.5fr 1fr`
-              : `". controls" auto "panel kline" auto / 1fr 1.5fr`
-            : `"controls" auto "panel" auto / auto`
-        ]}
-        columnGap={[3, isPCChartShown ? 4 : 0]}
-        rowGap={2}
-      >
-        <GridItem gridArea="controls">
-          <HStack justifyContent="space-between" my={[1, 0]}>
-            <MoonpayBuy>
-              <HStack gap={1}>
-                {/* <CreditCardIcon /> */}
-                {/* <Text color={colors.textLink} fontWeight="medium">
+            isPCChartShown
+              ? isChartLeft
+                ? `". controls" auto "kline  panel" auto / 1.5fr 1fr`
+                : `". controls" auto "panel kline" auto / 1fr 1.5fr`
+              : `"controls" auto "panel" auto / auto`
+          ]}
+          columnGap={[3, isPCChartShown ? 4 : 0]}
+          rowGap={2}
+        >
+          <GridItem gridArea="controls">
+            <HStack justifyContent="space-between" my={[1, 0]}>
+              <MoonpayBuy>
+                <HStack gap={1}>
+                  {/* <CreditCardIcon /> */}
+                  {/* <Text color={colors.textLink} fontWeight="medium">
                   Buy
                 </Text> */}
-              </HStack>
-            </MoonpayBuy>
-            <HStack>
-              <SlippageAdjuster />
-              {/* <Tooltip
+                </HStack>
+              </MoonpayBuy>
+              <HStack>
+                <SlippageAdjuster />
+                {/* <Tooltip
                 label={t('swap.blink_referral_desc', {
                   symbol: outputMint === solMintAddress ? tokenMap.get(inputMint)?.symbol : tokenMap.get(outputMint)?.symbol
                 })}
@@ -164,7 +166,7 @@ export default function Swap() {
                 </Box>
               </Tooltip> */}
 
-              {/* {!isMobile && isPCChartShown && (
+                {/* {!isMobile && isPCChartShown && (
                 <Box
                   cursor="pointer"
                   onClick={() => {
@@ -174,7 +176,7 @@ export default function Swap() {
                   <SwapExchangeIcon />
                 </Box>
               )} */}
-              {/* <Box
+                {/* <Box
                 cursor="pointer"
                 onClick={() => {
                   if (!isMobile) {
@@ -192,51 +194,24 @@ export default function Swap() {
                   </Box>
                 )}
               </Box> */}
+              </HStack>
             </HStack>
-          </HStack>
-        </GridItem>
-        {/* This is the swap */}
-        <GridItem ref={swapPanelRef} gridArea="panel">
-          <PanelCard p={[3, 6]} flexGrow={['1', 'unset']}>
-            <SwapPanel
-              onInputMintChange={setInputMint}
-              onOutputMintChange={setOutputMint}
-              onDirectionNeedReverse={() => setIsDirectionNeedReverse((b) => !b)}
-            />
-          </PanelCard>
-        </GridItem>
-
-        <GridItem gridArea="kline" {...(isMobile ? { mb: 3 } : {})} overflow="hidden">
-          <PanelCard ref={klineRef} p={[3, 3]} gap={4} height="100%" {...(isMobile || !isPCChartShown ? { display: 'none' } : {})}>
-            <SwapKlinePanel
-              untilDate={untilDate.current}
-              baseToken={baseToken}
-              quoteToken={quoteToken}
-              timeType={selectedTimeType}
-              onDirectionToggle={() => setDirectionReverse((b) => !b)}
-              onTimeTypeChange={setSelectedTimeType}
-            />
-          </PanelCard>
-          {isMobile && (
-            <PanelCard
-              p={[3, 6]}
-              gap={0}
-              onClick={() => {
-                setIsMobileChartShown(true)
-              }}
-              height="100%"
-            >
-              <SwapKlinePanelMobileThumbnail
-                untilDate={untilDate.current}
-                baseToken={baseToken}
-                quoteToken={quoteToken}
-                // onDirectionToggle={() => setDirectionReverse((b) => !b)}
-                // onTimeTypeChange={setSelectedTimeType}
+          </GridItem>
+          {/* This is the swap */}
+          <GridItem ref={swapPanelRef} gridArea="panel">
+            <PanelCard p={[3, 6]} flexGrow={['1', 'unset']}>
+              <SwapPanel
+                onInputMintChange={setInputMint}
+                onOutputMintChange={setOutputMint}
+                onDirectionNeedReverse={() => setIsDirectionNeedReverse((b) => !b)}
               />
-              <SwapKlinePanelMobileDrawer
+            </PanelCard>
+          </GridItem>
+
+          <GridItem gridArea="kline" {...(isMobile ? { mb: 3 } : {})} overflow="hidden">
+            <PanelCard ref={klineRef} p={[3, 3]} gap={4} height="100%" {...(isMobile || !isPCChartShown ? { display: 'none' } : {})}>
+              <SwapKlinePanel
                 untilDate={untilDate.current}
-                isOpen={isMobileChartShown}
-                onClose={() => setIsMobileChartShown(false)}
                 baseToken={baseToken}
                 quoteToken={quoteToken}
                 timeType={selectedTimeType}
@@ -244,9 +219,36 @@ export default function Swap() {
                 onTimeTypeChange={setSelectedTimeType}
               />
             </PanelCard>
-          )}
-        </GridItem>
-      </Grid>
+            {isMobile && (
+              <PanelCard
+                p={[3, 6]}
+                gap={0}
+                onClick={() => {
+                  setIsMobileChartShown(true)
+                }}
+                height="100%"
+              >
+                <SwapKlinePanelMobileThumbnail
+                  untilDate={untilDate.current}
+                  baseToken={baseToken}
+                  quoteToken={quoteToken}
+                  // onDirectionToggle={() => setDirectionReverse((b) => !b)}
+                  // onTimeTypeChange={setSelectedTimeType}
+                />
+                <SwapKlinePanelMobileDrawer
+                  untilDate={untilDate.current}
+                  isOpen={isMobileChartShown}
+                  onClose={() => setIsMobileChartShown(false)}
+                  baseToken={baseToken}
+                  quoteToken={quoteToken}
+                  timeType={selectedTimeType}
+                  onDirectionToggle={() => setDirectionReverse((b) => !b)}
+                  onTimeTypeChange={setSelectedTimeType}
+                />
+              </PanelCard>
+            )}
+          </GridItem>
+        </Grid>
       </BackgroundAnimation>
     </VStack>
   )
