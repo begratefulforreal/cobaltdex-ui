@@ -2,7 +2,7 @@ import axios from '@/api/axios'
 import { isValidPublicKey } from '@/utils/publicKey'
 import { MINUTE_MILLISECONDS } from '@/utils/date'
 import { useTokenStore, TokenPrice, useAppStore } from '@/store'
-import { solToWSol, WSOLMint, USDCMint, RAYMint, USDTMint, mSOLMint } from 'bifido-sdk'
+import { solToWSol, WSOLMint, USDCMint, RAYMint, USDTMint, mSOLMint, PONZIMONMint } from 'bifido-sdk'
 import { NATIVE_MINT } from '@solana/spl-token'
 import { PublicKey } from '@solana/web3.js'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -23,7 +23,7 @@ const prepareFetchList = new Set<string>([
   mSOLMint.toBase58(),
   RAYMint.toBase58(),
   USDCMint.toBase58(),
-  USDTMint.toBase58()
+  USDTMint.toBase58(),
 ])
 
 let fetchRefreshTag = 0

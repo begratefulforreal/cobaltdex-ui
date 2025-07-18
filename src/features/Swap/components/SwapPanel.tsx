@@ -79,6 +79,18 @@ export function SwapPanel({
 
   const [outputMint, setOutputMint] = useState<string>(PONZIMONMint.toBase58())
   const [tokenInput, tokenOutput] = [tokenMap.get(inputMint), tokenMap.get(outputMint)]
+  
+  // Debug logging for PONZIMON token lookup
+  if (outputMint === PONZIMONMint.toBase58()) {
+    console.log('🐛 SwapPanel PONZIMON Debug:', {
+      outputMint,
+      tokenFound: !!tokenOutput,
+      tokenMapSize: tokenMap.size,
+      tokenData: tokenOutput,
+      ponzimonInMap: tokenMap.has('mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM')
+    })
+  }
+  
   const [cacheLoaded, setCacheLoaded] = useState(false)
   const isTokenLoaded = tokenMap.size > 0
   const { tokenInfo: unknownTokenA } = useTokenInfo({

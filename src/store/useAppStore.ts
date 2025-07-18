@@ -9,7 +9,8 @@ import {
   ALL_PROGRAM_ID,
   AvailabilityCheckAPI3,
   TxVersion,
-  TokenInfo
+  TokenInfo,
+  PONZIMON_INFO
 } from 'bifido-sdk'
 
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
@@ -232,6 +233,48 @@ export const useAppStore = createStore<AppState>(
         false,
         action
       )
+
+      const ponzimonToken = {
+        chainId: 101,
+        address: 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM',
+        programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+        decimals: 6,
+        symbol: 'POKE',
+        name: 'Ponzimon',
+        logoURI: `https://wsrv.nl/?fit=cover&w=48&h=48&url=https://ipfs.io/ipfs/bafkreiczootiz3lfyco3wgirho6izqacmgcvpkf5bt5olfi6mvpsnbnkvu`,
+        tags: [],
+        extensions: {},
+        priority: 2,
+        type: 'raydium'
+      }
+
+      // Force add to token store
+      const tokenStore = useTokenStore.getState()
+      const currentTokenMap = new Map(tokenStore.tokenMap)
+      const currentTokenList = [...tokenStore.tokenList]
+      const currentMintGroup = {
+        official: new Set(tokenStore.mintGroup.official),
+        jup: tokenStore.mintGroup.jup
+      }
+
+      // Always override
+      currentTokenMap.set(ponzimonToken.address, ponzimonToken as any)
+      currentMintGroup.official.add(ponzimonToken.address)
+
+      const existingIndex = currentTokenList.findIndex((t) => t.address === ponzimonToken.address)
+      if (existingIndex >= 0) {
+        currentTokenList[existingIndex] = ponzimonToken as any
+      } else {
+        currentTokenList.push(ponzimonToken as any)
+      }
+
+      // Update the store immediately
+      useTokenStore.setState({
+        tokenMap: currentTokenMap,
+        tokenList: currentTokenList,
+        mintGroup: currentMintGroup
+      })
+
       set({ raydium, initialing: false, connected: !!(payload.owner || get().publicKey) }, false, action)
       set(
         {
@@ -307,7 +350,7 @@ export const useAppStore = createStore<AppState>(
           const readyRpcs = [...rpcs]
           if (localRpcNode?.rpcNode) readyRpcs.sort((a, b) => (a.name === localRpcNode.rpcNode!.name ? -1 : 1))
           const success = await setRpcUrlAct(
-            'https://old-winter-research.solana-mainnet.quiknode.pro/9f73059453a10b230392f1815d421cd60ef9f5b9/',
+            'https://old-winter-research.solana-mainnet.quiknode.pro/9f73059453a10b230392f1815d421cd60ef9f5b9',
             true,
             i !== readyRpcs.length - 1
           )

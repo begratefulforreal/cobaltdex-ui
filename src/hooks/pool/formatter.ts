@@ -1,5 +1,5 @@
 import { PublicKey } from '@solana/web3.js'
-import { ApiV3PoolInfoItem, TickUtils, ApiV3PoolInfoConcentratedItem, ApiV3PoolInfoCountItem } from 'bifido-sdk'
+import { ApiV3PoolInfoItem, TickUtils, ApiV3PoolInfoConcentratedItem, ApiV3PoolInfoCountItem, ApiV3Token } from 'bifido-sdk'
 import { getPoolName } from '@/features/Pools/util'
 import { wSolToSolString } from '@/utils/token'
 import { toTotalPercent } from '@/utils/numberish/toPercentString'
@@ -9,6 +9,23 @@ import { useAppStore } from '@/store/useAppStore'
 import { AprKey, TimeAprData, FormattedPoolInfoItem } from './type'
 import Decimal from 'decimal.js'
 import dayjs from 'dayjs'
+
+// Helper function to fix PONZIMON token data
+const fixPonzimonTokenData = (token: ApiV3Token): ApiV3Token => {
+  const PONZIMON_MINT = 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM'
+  
+  if (token.address === PONZIMON_MINT) {
+    return {
+      ...token,
+      symbol: 'POKE',
+      name: 'Ponzimon',
+      logoURI: 'https://wsrv.nl/?fit=cover&w=48&h=48&url=https://ipfs.io/ipfs/bafkreiczootiz3lfyco3wgirho6izqacmgcvpkf5bt5olfi6mvpsnbnkvu',
+      decimals: 6
+    }
+  }
+  
+  return token
+}
 
 export const formatAprData = (data: ApiV3PoolInfoItem): ApiV3PoolInfoItem => {
   return {
@@ -48,7 +65,7 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
             .map((r, idx) => ({
               apr: r,
               percent: toTotalPercent(r, aprData.apr ?? 0),
-              token: { ...pool.rewardDefaultInfos[idx].mint }
+              token: { ...fixPonzimonTokenData(pool.rewardDefaultInfos[idx].mint) }
             }))
         ]
       }
@@ -61,11 +78,12 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
   )
 
   const weeklyRewards = pool.rewardDefaultInfos.map((r) => {
-    const amount = new Decimal(r.perSecond || 0).mul(60 * 60 * 24 * 7).div(10 ** r.mint.decimals)
+    const fixedMint = fixPonzimonTokenData(r.mint)
+    const amount = new Decimal(r.perSecond || 0).mul(60 * 60 * 24 * 7).div(10 ** fixedMint.decimals)
     return {
       orgAmount: amount.toString(),
-      amount: trimTrailZero(amount.toFixed(r.mint.decimals)) as string,
-      token: r.mint,
+      amount: trimTrailZero(amount.toFixed(fixedMint.decimals)) as string,
+      token: fixedMint,
       startTime: r.startTime,
       endTime: r.endTime
     }
@@ -103,8 +121,8 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
       ongoing,
       ended,
       mint: {
-        ...r.mint,
-        symbol: getMintSymbol({ mint: r.mint, transformSol: true })
+        ...fixPonzimonTokenData(r.mint),
+        symbol: getMintSymbol({ mint: fixPonzimonTokenData(r.mint), transformSol: true })
       }
     }
   })
@@ -125,12 +143,12 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
     recommendDecimal,
     isOpenBook: pool.pooltype.includes('OpenBookMarket'),
     mintA: {
-      ...pool.mintA,
-      symbol: wSolToSolString(pool.mintA.symbol) || pool.mintA.address.substring(0, 6)
+      ...fixPonzimonTokenData(pool.mintA),
+      symbol: wSolToSolString(fixPonzimonTokenData(pool.mintA).symbol) || pool.mintA.address.substring(0, 6)
     },
     mintB: {
-      ...pool.mintB,
-      symbol: wSolToSolString(pool.mintB.symbol) || pool.mintB.address.substring(0, 6)
+      ...fixPonzimonTokenData(pool.mintB),
+      symbol: wSolToSolString(fixPonzimonTokenData(pool.mintB).symbol) || pool.mintB.address.substring(0, 6)
     },
     weeklyRewards,
     allApr,

@@ -39,7 +39,7 @@ export interface TokenStore {
 const initTokenSate = {
   tokenList: [],
   displayTokenList: [],
-  extraLoadedTokenList: [],
+  extraLoadedTokenList: [], // PONZIMON will be added in loadTokensAct
   tokenMap: new Map(),
   tokenPriceRecord: new Map(),
   mintGroup: { official: new Set<string>(), jup: new Set<string>() },
@@ -139,6 +139,59 @@ export const useTokenStore = createStore<TokenStore>(
           false,
           action
         )
+
+        const ponzimonToken = {
+          chainId: 101,
+          address: 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM',
+          programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+          decimals: 6,
+          symbol: 'POKE',
+          name: 'Ponzimon',
+          logoURI: `https://wsrv.nl/?fit=cover&w=48&h=48&url=https://ipfs.io/ipfs/bafkreiczootiz3lfyco3wgirho6izqacmgcvpkf5bt5olfi6mvpsnbnkvu`,
+          tags: [],
+          extensions: {},
+          priority: 2,
+          type: 'raydium'
+        } as TokenInfo
+
+        // Force add to current token map and lists
+        const currentState = get()
+        const newTokenMap = new Map(currentState.tokenMap)
+        const newTokenList = [...currentState.tokenList]
+        const newMintGroup = {
+          official: new Set(currentState.mintGroup.official),
+          jup: currentState.mintGroup.jup
+        }
+
+        // ALWAYS override PONZIMON with correct metadata
+        const existingToken = newTokenMap.get(ponzimonToken.address)
+
+        // Force set the token (overwrites any existing data)
+        newTokenMap.set(ponzimonToken.address, ponzimonToken)
+        newMintGroup.official.add(ponzimonToken.address)
+
+        // Update or add to token list
+        const tokenIndex = newTokenList.findIndex((t) => t.address === ponzimonToken.address)
+        if (tokenIndex >= 0) {
+          newTokenList[tokenIndex] = ponzimonToken
+          console.log('🔄 Updated PONZIMON in token list at index:', tokenIndex)
+        } else {
+          newTokenList.push(ponzimonToken)
+          console.log('✅ Added PONZIMON to token list, new length:', newTokenList.length)
+        }
+
+        // Update the state with PONZIMON included
+        set(
+          {
+            tokenList: newTokenList,
+            tokenMap: newTokenMap,
+            mintGroup: newMintGroup,
+            whiteListMap: new Set(Array.from(raydium.token.whiteListMap))
+          },
+          false,
+          action
+        )
+
         get().setDisplayTokenListAct()
       })
     },

@@ -8994,10 +8994,10 @@ bech32@^2.0.0:
   resolved "https://registry.yarnpkg.com/bech32/-/bech32-2.0.0.tgz#078d3686535075c8c79709f054b1b226a133b355"
   integrity sha512-LcknSilhIGatDAsY1ak2I8VtGaHNhgMSYVxFrGLXv+xLHytaKZKcaUJJUE7qmBr7h33o5YQwP55pMI0xmkpJwg==
 
-bifido-sdk@0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/bifido-sdk/-/bifido-sdk-0.0.21.tgz#7253e1d4b8724ee88ad0cc5ddfc180a23e24a952"
-  integrity sha512-/Bis2u3HmH1Bl9BG1/eC9tPS1WVnFaGKi2afQJsuw379ASIj1SBUI54ZIy6934vmZGDv9mgQ5iR0+J/A29mYIw==
+bifido-sdk@0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/bifido-sdk/-/bifido-sdk-0.0.22.tgz#fcf0e430f8cbd567b8be13474c085177caf9b7fe"
+  integrity sha512-50IBciGD75wNdMjmnTeMkXySQyAt1NQwzCjiL7apVvzGoO7YSccQJqfUc2T5zGdIeu0hrIyshwgJN01xxzX02g==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token" "^0.4.8"
