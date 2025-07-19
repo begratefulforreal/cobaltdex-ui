@@ -79,18 +79,7 @@ export function SwapPanel({
 
   const [outputMint, setOutputMint] = useState<string>(PONZIMONMint.toBase58())
   const [tokenInput, tokenOutput] = [tokenMap.get(inputMint), tokenMap.get(outputMint)]
-  
-  // Debug logging for PONZIMON token lookup
-  if (outputMint === PONZIMONMint.toBase58()) {
-    console.log('🐛 SwapPanel PONZIMON Debug:', {
-      outputMint,
-      tokenFound: !!tokenOutput,
-      tokenMapSize: tokenMap.size,
-      tokenData: tokenOutput,
-      ponzimonInMap: tokenMap.has('mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM')
-    })
-  }
-  
+
   const [cacheLoaded, setCacheLoaded] = useState(false)
   const isTokenLoaded = tokenMap.size > 0
   const { tokenInfo: unknownTokenA } = useTokenInfo({
@@ -265,7 +254,31 @@ export function SwapPanel({
   const balanceAmount = getTokenBalanceUiAmount({ mint: inputMint, decimals: tokenInput?.decimals }).amount
   const balanceNotEnough = balanceAmount.lt(inputAmount || 0) ? t('error.balance_not_enough') : undefined
   const isSolFeeNotEnough = inputAmount && isSolWSol(inputMint || '') && balanceAmount.sub(inputAmount || 0).lt(DEFAULT_SOL_RESERVER)
-  const swapError = (error && i18n.exists(`swap.error_${error}`) ? t(`swap.error_${error}`) : error) || balanceNotEnough
+
+  // Map generic swap errors to specific error messages
+  const getSwapError = (error: string | undefined) => {
+    if (!error) return undefined
+
+    // Check for generic swap computation errors that should be treated as liquidity issues
+    if (
+      error.includes('Failed to compute swap') ||
+      error.includes('Request failed with status code 500') ||
+      error.includes('status code 500') ||
+      error.includes('compute swap')
+    ) {
+      return t('swap.error_INSUFFICIENT_LIQUIDITY')
+    }
+
+    // Check if we have a specific translation for this error
+    if (i18n.exists(`swap.error_${error}`)) {
+      return t(`swap.error_${error}`)
+    }
+
+    // Return the raw error as fallback
+    return error
+  }
+
+  const swapError = getSwapError(error) || balanceNotEnough
   const isPoolNotOpenError = !!swapError && !!openTime
 
   const handleHighRiskConfirm = useEvent(() => {

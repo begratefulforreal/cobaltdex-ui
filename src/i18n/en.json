@@ -252,6 +252,7 @@
     "error_AMOUNT_TOO_SMALL": "Swap Amount Too Small",
     "error_TOO_LOW_LIQUIDITY": " Insufficient Liquidity",
     "error_INSUFFICIENT_LIQUIDITY": " Insufficient Liquidity",
+    "error_COMPUTE_ERROR": "Unable to compute swap. Please try again.",
     "error_REQ_POOL_NOT_OPEN": "Pool Open At",
     "error_sol_fee_not_insufficient": "You need at least {{amount}} SOL to pay for fees and deposits",
     "user_added_token_list": "User Added Token List",
