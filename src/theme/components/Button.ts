@@ -109,14 +109,20 @@ export const Button = {
     outline: {
       borderColor: colors.secondary,
       color: colors.secondary,
+      background: colors.backgroundTransparent12,
+      border: '1px solid',
       _hover: {
         opacity: '0.9',
-        background: colors.outlineButtonBg
+        background: colors.outlineButtonBg,
+        borderColor: colors.selectActive,
+        color: colors.textPrimary
       },
       _active: {
         filter: 'brightness(0.7)',
         opacity: '0.9',
-        background: colors.outlineButtonBg
+        background: colors.outlineButtonBg,
+        borderColor: colors.selectActive,
+        color: colors.textPrimary
       },
       '&:disabled:disabled': {
         opacity: '0.5'

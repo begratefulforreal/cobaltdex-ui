@@ -1,19 +1,19 @@
 export const darkColors: Record<keyof typeof colors, string> = {
   // app main bg color
-  primary: '#E2E8F0',
-  secondary: '#B8D6FF',
-  secondary10: 'rgba(184, 214, 255, 0.1)',
+  primary: '#00D2FF',
+  secondary: '#3A6CF4',
+  secondary10: 'rgba(58, 108, 244, 0.1)',
 
   // component color - card backgrounds
-  backgroundDark: 'rgba(226, 232, 240, 0.95)',
-  backgroundDark50: 'rgba(226, 232, 240, 0.5)',
-  backgroundMedium: 'rgba(226, 232, 240, 0.8)',
-  backgroundLight: 'linear-gradient(90deg, rgba(207, 232, 245, 0.75) 0%, rgba(187, 229, 251, 0.85) 10%, rgba(187, 229, 251, 0.95) 100%)',
-  backgroundLight50: 'rgba(226, 232, 240, 0.5)',
-  backgroundLight30: 'rgba(226, 232, 240, 0.3)',
-  backgroundTransparent12: 'rgba(226, 232, 240, 0.12)',
-  backgroundTransparent07: 'rgba(226, 232, 240, 0.07)',
-  backgroundTransparent10: 'rgba(226, 232, 240, 0.1)',
+  backgroundDark: 'rgba(15, 23, 42, 0.95)',
+  backgroundDark50: 'rgba(15, 23, 42, 0.5)',
+  backgroundMedium: 'rgba(30, 41, 59, 0.8)',
+  backgroundLight: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.95) 50%, rgba(51, 65, 85, 0.9) 100%)',
+  backgroundLight50: 'rgba(30, 41, 59, 0.5)',
+  backgroundLight30: 'rgba(51, 65, 85, 0.3)',
+  backgroundTransparent12: 'rgba(0, 210, 255, 0.12)',
+  backgroundTransparent07: 'rgba(0, 210, 255, 0.07)',
+  backgroundTransparent10: 'rgba(58, 108, 244, 0.1)',
 
   // Input and selection backgrounds
   // inputBg: 'rgba(226, 232, 240, 0.95)',
@@ -23,59 +23,59 @@ export const darkColors: Record<keyof typeof colors, string> = {
   // selectActiveBg: 'rgba(226, 232, 240, 1)',
 
   // text colors for better visibility
-  textPrimary: '#000000',
-  textSecondary: '#000000',
-  textTertiary: '#000000',
-  textRevertPrimary: '#000000',
-  textRed: '#FF0000',
+  textPrimary: '#F8FAFC',
+  textSecondary: '#E2E8F0',
+  textTertiary: '#94A3B8',
+  textRevertPrimary: '#0F172A',
+  textRed: '#EF4444',
   textBlack: '#000000',
 
-  textLink: '#000000',
-  textQuaternary: '#000000',
-  textQuinary: '#000000',
-  textSenary: 'rgba(137, 167, 214, 0.5)',
-  textSeptenary: '#000000',
-  textPurple: '#89A7D6',
-  textPink: '#89A7D6',
+  textLink: '#00D2FF',
+  textQuaternary: '#64748B',
+  textQuinary: '#1E293B',
+  textSenary: 'rgba(148, 163, 184, 0.5)',
+  textSeptenary: '#3A6CF4',
+  textPurple: '#8B5CF6',
+  textPink: '#EC4899',
 
   // button
-  buttonPrimary: '#E7FF45',
-  buttonPrimary__01: '#E7FF45',
-  buttonPrimary__02: '#D4F540',
-  buttonSolidText: '#051829',
-  buttonSecondary: 'rgba(231, 255, 69, 0.4)',
+  buttonPrimary: '#00D2FF',
+  buttonPrimary__01: '#00D2FF',
+  buttonPrimary__02: '#3A6CF4',
+  buttonSolidText: '#0F172A',
+  buttonSecondary: 'rgba(0, 210, 255, 0.4)',
 
   // switch
-  switchOn: '#E7FF45',
-  switchOff: '#89A7D6',
+  switchOn: '#00D2FF',
+  switchOff: '#64748B',
 
   // select
-  selectActive: '#E7FF45',
-  selectActiveSecondary: '#E7FF45',
-  selectInactive: 'rgba(137, 167, 214, 0.3)',
+  selectActive: '#00D2FF',
+  selectActiveSecondary: '#3A6CF4',
+  selectInactive: 'rgba(100, 116, 139, 0.3)',
 
   // chart
-  chart01: '#E7FF45',
-  chart02: '#D4F540',
-  chart03: '#C6EB33',
-  chart04: '#B8E126',
-  chart05: '#AAD719',
-  chart06: '#9CCD0C',
-  chart07: '#8EC300',
-  chart08: '#D4F540',
-  chart09: '#E7FF4533',
+  chart01: '#00D2FF',
+  chart02: '#3A6CF4',
+  chart03: '#8B5CF6',
+  chart04: '#EC4899',
+  chart05: '#F59E0B',
+  chart06: '#10B981',
+  chart07: '#06B6D4',
+  chart08: '#6366F1',
+  chart09: 'rgba(0, 210, 255, 0.3)',
 
   // Icon
-  iconBg: 'rgba(226, 232, 240, 0.15)',
-  iconEmptyStroke: '#051829',
+  iconBg: 'rgba(15, 23, 42, 0.15)',
+  iconEmptyStroke: '#E2E8F0',
 
   // success/warning/error/info
-  semanticSuccess: '#E7FF45',
-  semanticError: '#FF4E4E',
-  semanticWarning: '#FFB84E',
-  semanticNeutral: '#89A7D6',
-  semanticFocus: '#E7FF45',
-  semanticFocusShadow: 'none',
+  semanticSuccess: '#10B981',
+  semanticError: '#EF4444',
+  semanticWarning: '#F59E0B',
+  semanticNeutral: '#64748B',
+  semanticFocus: '#00D2FF',
+  semanticFocusShadow: '0 0 0 3px rgba(0, 210, 255, 0.3)',
 
   // Tab
   tabFolderTabListBg: 'var(--background-light-opacity)',
@@ -85,122 +85,122 @@ export const darkColors: Record<keyof typeof colors, string> = {
   stepHoofBg: 'var(--primary)',
 
   // +1% is priceFloatingUp; -1% is priceFloatingDown
-  priceFloatingUp: '#E7FF45',
-  priceFloatingDown: '#FF4E4E',
-  priceFloatingFlat: '#89A7D6',
+  priceFloatingUp: '#10B981',
+  priceFloatingDown: '#EF4444',
+  priceFloatingFlat: '#64748B',
 
   // tooltip (this color is not in figma ui color system,but in figma ui page)
-  tooltipBg: 'rgba(226, 232, 240, 0.95)',
+  tooltipBg: 'rgba(15, 23, 42, 0.95)',
 
-  popoverBg: 'rgba(226, 232, 240, 0.95)',
+  popoverBg: 'rgba(15, 23, 42, 0.95)',
 
   //customize (by V3 frontend coder)
-  scrollbarThumb: 'rgba(137, 167, 214, 0.2)',
+  scrollbarThumb: 'rgba(0, 210, 255, 0.2)',
 
   // badge
-  badgePurple: 'rgba(137, 167, 214, 0.5)',
-  badgeBlue: 'rgba(184, 214, 255, 0.5)',
+  badgePurple: 'rgba(139, 92, 246, 0.5)',
+  badgeBlue: 'rgba(0, 210, 255, 0.5)',
 
   // divider
-  dividerBg: 'rgba(137, 167, 214, 0.3)',
+  dividerBg: 'rgba(100, 116, 139, 0.3)',
 
   // input
-  inputMask: 'rgba(226, 232, 240, 0.2)',
+  inputMask: 'rgba(15, 23, 42, 0.2)',
 
   // customize
-  backgroundApp: '#96bfe6',
-  solidButtonBg: '#E7FF45',
-  outlineButtonBg: 'rgba(231, 255, 69, 0.95)',
-  filledProgressBg: 'rgba(226, 232, 240, 0.95)',
-  modalContainerBg: 'rgba(226, 232, 240, 0.12)',
-  transparentContainerBg: 'rgba(226, 232, 240, 0.95)',
-  infoButtonBg: 'rgba(226, 232, 240, 0.4)',
-  warnButtonBg: 'rgba(255, 184, 78, 0.3)',
-  warnButtonLightBg: 'rgba(255, 184, 78, 0.1)',
-  buttonBg01: 'rgba(231, 255, 69, 0.95)',
-  lightPurple: '#89A7D6',
-  background01: 'rgba(226, 232, 240, 0.95)',
-  background02: 'rgba(226, 232, 240, 0.95)',
-  background03: 'rgba(226, 232, 240, 0.85)',
-  cardBorder01: 'rgba(137, 167, 214, 0.2)',
-  text01: '#051829',
-  text02: '#051829',
-  text03: '#051829',
-  brandGradient: 'linear-gradient(180deg, #E8F0FF 0%, #D8E6FF 100%)',
+  backgroundApp: 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%)',
+  solidButtonBg: 'linear-gradient(135deg, #00D2FF 0%, #3A6CF4 100%)',
+  outlineButtonBg: 'rgba(0, 210, 255, 0.15)',
+  filledProgressBg: 'linear-gradient(90deg, #00D2FF 0%, #3A6CF4 100%)',
+  modalContainerBg: 'rgba(15, 23, 42, 0.8)',
+  transparentContainerBg: 'rgba(15, 23, 42, 0.9)',
+  infoButtonBg: 'rgba(0, 210, 255, 0.1)',
+  warnButtonBg: 'rgba(245, 158, 11, 0.3)',
+  warnButtonLightBg: 'rgba(245, 158, 11, 0.1)',
+  buttonBg01: 'rgba(0, 210, 255, 0.15)',
+  lightPurple: '#8B5CF6',
+  background01: 'rgba(15, 23, 42, 0.95)',
+  background02: 'rgba(30, 41, 59, 0.9)',
+  background03: 'rgba(51, 65, 85, 0.85)',
+  cardBorder01: 'rgba(0, 210, 255, 0.2)',
+  text01: '#F8FAFC',
+  text02: '#E2E8F0',
+  text03: '#94A3B8',
+  brandGradient: 'linear-gradient(135deg, #00D2FF 0%, #3A6CF4 50%, #8B5CF6 100%)',
   dividerDashGradient: 'repeating-linear-gradient(to right, currentColor 0 5px, transparent 5px 10px)',
 
-  tokenAvatarBg: 'rgba(226, 232, 240, 0.95)',
+  tokenAvatarBg: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.95) 100%)',
 
-  panelCardShadow: '0px 8px 24px rgba(137, 167, 214, 0.12)',
-  panelCardBorder: 'none'
+  panelCardShadow: '0px 8px 32px rgba(0, 210, 255, 0.1), 0px 4px 16px rgba(0, 0, 0, 0.2)',
+  panelCardBorder: '1px solid rgba(0, 210, 255, 0.2)'
 }
 
 export const lightColors: Partial<typeof darkColors> = {
   // app main bg color
-  primary: '#abc4ff',
-  secondary: '#4F53F3',
-  secondary10: 'rgba(34, 209, 248, 0.1)',
+  primary: '#3A6CF4',
+  secondary: '#00D2FF',
+  secondary10: 'rgba(0, 210, 255, 0.1)',
 
   // component color
-  backgroundDark: '#EDEDFF',
-  backgroundDark50: '#EDEDFF80',
-  backgroundMedium: '#EDEDFF',
-  backgroundLight: '#F5F8FF',
-  backgroundLight50: '#F5F8FF88',
-  backgroundLight30: '#F5F8FF4d',
-  backgroundTransparent12: 'rgba(171, 196, 255, 0.12)',
-  backgroundTransparent07: 'rgba(171, 196, 255, 0.07)',
-  backgroundTransparent10: 'rgba(171, 196, 255, 0.1)',
+  backgroundDark: '#F8FAFC',
+  backgroundDark50: 'rgba(248, 250, 252, 0.8)',
+  backgroundMedium: '#F1F5F9',
+  backgroundLight: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #F1F5F9 100%)',
+  backgroundLight50: 'rgba(241, 245, 249, 0.8)',
+  backgroundLight30: 'rgba(226, 232, 240, 0.3)',
+  backgroundTransparent12: 'rgba(58, 108, 244, 0.12)',
+  backgroundTransparent07: 'rgba(58, 108, 244, 0.07)',
+  backgroundTransparent10: 'rgba(0, 210, 255, 0.1)',
 
   // text
-  textPrimary: '#000000',
-  textSecondary: '#000000', // Colors wont change? cookies? idk..
-  textTertiary: '#474ABB99',
-  textRevertPrimary: '#ECF5FF',
-  textRed: '#FF0000',
+  textPrimary: '#0F172A',
+  textSecondary: '#1E293B',
+  textTertiary: '#64748B',
+  textRevertPrimary: '#FFFFFF',
+  textRed: '#DC2626',
   textBlack: '#000000',
 
-  textLink: '#22D1F8',
+  textLink: '#3A6CF4',
 
   /** 🤔 what's this */
-  textQuaternary: '#C4D6FF',
+  textQuaternary: '#94A3B8',
   /** 🤔 what's this */
-  textQuinary: '#1C243E',
+  textQuinary: '#F1F5F9',
   /** 🤔 what's this */
-  textSenary: 'rgba(196, 214, 255, 0.5)',
+  textSenary: 'rgba(100, 116, 139, 0.5)',
   /** 🤔 what's this */
-  textSeptenary: '#22D1F8',
+  textSeptenary: '#00D2FF',
   /** 🤔 what's this */
-  textPurple: '#8C6EEF',
+  textPurple: '#8B5CF6',
   /** 🤔 what's this */
-  textPink: '#FF4EA3',
+  textPink: '#EC4899',
 
   // button
-  buttonPrimary: '#4F53F3',
-  buttonPrimary__01: '#4F53F3',
-  buttonPrimary__02: '#8C6EEF',
-  buttonSolidText: '#ECF5FF',
-  buttonSecondary: '#39D0D8',
+  buttonPrimary: '#3A6CF4',
+  buttonPrimary__01: '#3A6CF4',
+  buttonPrimary__02: '#00D2FF',
+  buttonSolidText: '#FFFFFF',
+  buttonSecondary: '#00D2FF',
 
   // switch
-  switchOn: '#8C6EEF',
-  switchOff: '#8C6EEF80',
+  switchOn: '#3A6CF4',
+  switchOff: 'rgba(100, 116, 139, 0.5)',
 
   // select
-  selectActive: '#8C6EEF',
-  selectActiveSecondary: '#8C6EEF',
-  selectInactive: '#abc4ffef',
+  selectActive: '#3A6CF4',
+  selectActiveSecondary: '#00D2FF',
+  selectInactive: 'rgba(148, 163, 184, 0.3)',
 
   // chart
-  chart01: '#abc4ff',
-  chart02: '#39D0D8',
-  chart03: '#8C6EEF',
-  chart04: '#2B6AFF',
-  chart05: '#FF7043',
-  chart06: '#FED33A',
-  chart07: '#4F53F3',
-  chart08: '#22D1F8',
-  chart09: '#8C6EEF33',
+  chart01: '#3A6CF4',
+  chart02: '#00D2FF',
+  chart03: '#8B5CF6',
+  chart04: '#EC4899',
+  chart05: '#F59E0B',
+  chart06: '#10B981',
+  chart07: '#06B6D4',
+  chart08: '#6366F1',
+  chart09: 'rgba(58, 108, 244, 0.3)',
 
   // Icon
   iconBg: '',
@@ -245,33 +245,33 @@ export const lightColors: Partial<typeof darkColors> = {
   inputMask: '#fff3',
 
   // customize (by V3 frontend coder)
-  backgroundApp: '#96bfe6',
+  backgroundApp: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #CBD5E1 100%)',
 
-  solidButtonBg: 'linear-gradient(272deg, #4F53F3 2.63%, #8C6EEF 95.31%)',
-  outlineButtonBg: 'linear-gradient(270deg, #8C6EEF1a 0%, #4F53F31a 100%)',
-  filledProgressBg: 'linear-gradient(270deg, #8C6EEF 0%, #4F53F3 100%)',
-  transparentContainerBg: '#F5F8FF',
-  modalContainerBg: '#ABC4FF12',
-  infoButtonBg: '#ABC4FF33',
-  warnButtonBg: '#FED33A33',
-  warnButtonLightBg: '#FED33A1A',
-  buttonBg01: '#ABC4FF1F',
-  lightPurple: '#474ABB',
-  background01: '#EDEDFF',
-  background02: '#ABC4FF33',
-  background03: '#FF4EA31A',
-  cardBorder01: '#8C6EEF80',
-  text01: '#D6CC56',
-  text02: '#000',
-  text03: '#474ABB',
+  solidButtonBg: 'linear-gradient(135deg, #3A6CF4 0%, #00D2FF 100%)',
+  outlineButtonBg: 'rgba(58, 108, 244, 0.1)',
+  filledProgressBg: 'linear-gradient(90deg, #3A6CF4 0%, #00D2FF 100%)',
+  transparentContainerBg: '#FFFFFF',
+  modalContainerBg: 'rgba(248, 250, 252, 0.9)',
+  infoButtonBg: 'rgba(58, 108, 244, 0.1)',
+  warnButtonBg: 'rgba(245, 158, 11, 0.2)',
+  warnButtonLightBg: 'rgba(245, 158, 11, 0.1)',
+  buttonBg01: 'rgba(58, 108, 244, 0.1)',
+  lightPurple: '#8B5CF6',
+  background01: '#F8FAFC',
+  background02: 'rgba(58, 108, 244, 0.1)',
+  background03: 'rgba(236, 72, 153, 0.1)',
+  cardBorder01: 'rgba(58, 108, 244, 0.2)',
+  text01: '#3A6CF4',
+  text02: '#0F172A',
+  text03: '#64748B',
   /** it's designer's variable name in Figma */
-  brandGradient: 'linear-gradient(244deg, #7748FC 8.17%, #39D0D8 101.65%)',
+  brandGradient: 'linear-gradient(135deg, #3A6CF4 0%, #00D2FF 50%, #8B5CF6 100%)',
   dividerDashGradient: 'repeating-linear-gradient(to right, currentColor 0 5px, transparent 5px 10px)',
 
-  tokenAvatarBg: 'linear-gradient(127deg, rgba(171, 196, 255, 0.20) 28.69%, rgba(171, 196, 255, 0.00) 100%) #fffe',
+  tokenAvatarBg: 'linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.95) 100%)',
 
-  panelCardShadow: 'none',
-  panelCardBorder: '1px solid rgba(171, 196, 255, 0.50)'
+  panelCardShadow: '0px 8px 32px rgba(58, 108, 244, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04)',
+  panelCardBorder: '1px solid rgba(58, 108, 244, 0.15)'
 }
 /**
  * note: it is not colors value, but colors css variable
