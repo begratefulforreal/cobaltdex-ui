@@ -1,4 +1,4 @@
-import { ApiV3PoolInfoConcentratedItem } from 'bifido-sdk'
+import { ApiV3PoolInfoConcentratedItem } from 'cobaltdex-sdk'
 import { AprKey } from '@/hooks/pool/type'
 import useTokenPrice from '@/hooks/token/useTokenPrice'
 import BN from 'bn.js'

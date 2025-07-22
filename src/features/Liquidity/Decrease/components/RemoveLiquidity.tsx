@@ -16,7 +16,7 @@ import { colors } from '@/theme/cssVariables'
 import Decimal from 'decimal.js'
 import { useEvent } from '@/hooks/useEvent'
 import useRefreshEpochInfo from '@/hooks/useRefreshEpochInfo'
-import { getTransferAmountFeeV2 } from 'bifido-sdk'
+import { getTransferAmountFeeV2 } from 'cobaltdex-sdk'
 import BN from 'bn.js'
 
 const BN_ZERO = new BN(0)

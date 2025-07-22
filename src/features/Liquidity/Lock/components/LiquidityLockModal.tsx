@@ -22,7 +22,7 @@ import WarningIcon from '@/icons/misc/WarningIcon'
 import { LockCpmmPoolInfo } from '@/hooks/portfolio/cpmm/useLockableCpmmLp'
 import { formatCurrency } from '@/utils/numberish/formatter'
 import { useTokenAccountStore } from '@/store'
-import { ApiV3PoolInfoStandardItemCpmm } from 'bifido-sdk'
+import { ApiV3PoolInfoStandardItemCpmm } from 'cobaltdex-sdk'
 import BN from 'bn.js'
 
 function LiquidityLockModal({

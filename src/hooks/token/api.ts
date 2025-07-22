@@ -1,4 +1,4 @@
-import { TokenInfo, ApiV3Token } from 'bifido-sdk'
+import { TokenInfo, ApiV3Token } from 'cobaltdex-sdk'
 import axios from '@/api/axios'
 import { PublicKey, Connection, AccountInfo } from '@solana/web3.js'
 import {

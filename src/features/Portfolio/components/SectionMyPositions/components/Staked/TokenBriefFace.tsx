@@ -1,5 +1,5 @@
 import { Text, VStack } from '@chakra-ui/react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 import TokenAvatar from '@/components/TokenAvatar'
 import { colors } from '@/theme/cssVariables'

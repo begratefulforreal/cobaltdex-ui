@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react'
-import { TokenAccount } from 'bifido-sdk'
+import { TokenAccount } from 'cobaltdex-sdk'
 import { getAssociatedTokenAddressSync } from '@solana/spl-token'
 
 import useTokenInfo from '@/hooks/token/useTokenInfo'

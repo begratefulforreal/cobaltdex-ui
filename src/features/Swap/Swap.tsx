@@ -1,5 +1,5 @@
 import { Box, Grid, GridItem, HStack, Text, VStack, useClipboard } from '@chakra-ui/react'
-import { RAYMint, SOLMint, PONZIMONMint } from 'bifido-sdk'
+import { RAYMint, SOLMint, PONZIMONMint } from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'

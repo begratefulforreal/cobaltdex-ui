@@ -1,6 +1,6 @@
 import { Badge, Box, Flex, HStack, SimpleGrid, Text } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 import TokenAvatar from '@/components/TokenAvatar'
 import TokenAvatarPair from '@/components/TokenAvatarPair'

@@ -29,7 +29,7 @@ import {
   PoolFetchType,
   TickUtils,
   getLiquidityFromAmounts
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import { useEffect, useRef, useState } from 'react'
 
 import { useAppStore, useClmmStore, useLiquidityStore } from '@/store'

@@ -1,4 +1,4 @@
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 import { colors } from '@/theme/cssVariables'
 import { Text, Flex } from '@chakra-ui/react'
 import TokenAvatar from '../../TokenAvatar'

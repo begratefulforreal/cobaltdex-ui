@@ -12,7 +12,7 @@ import {
   CpmmConfigInfoLayout,
   ApiCpmmConfigInfo,
   CpmmLockExtInfo
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import createStore from './createStore'
 import { useAppStore } from './useAppStore'

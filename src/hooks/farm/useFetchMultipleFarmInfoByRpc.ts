@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import useSWR from 'swr'
 import shallow from 'zustand/shallow'
-import { splAccountLayout } from 'bifido-sdk'
+import { splAccountLayout } from 'cobaltdex-sdk'
 import { Connection } from '@solana/web3.js'
 import ToPublicKey from '@/utils/publicKey'
 import { MINUTE_MILLISECONDS } from '@/utils/date'

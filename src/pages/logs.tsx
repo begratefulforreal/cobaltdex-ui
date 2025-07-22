@@ -1,5 +1,5 @@
 import { useEffect, useState, MouseEvent, useCallback, useMemo } from 'react'
-import { STORAGE_KEY, ResHistory } from 'bifido-sdk'
+import { STORAGE_KEY, ResHistory } from 'cobaltdex-sdk'
 import { Flex, Box, Menu, MenuButton, MenuList, MenuItem, Button, Text } from '@chakra-ui/react'
 import { ChevronDown } from 'react-feather'
 import dayjs from 'dayjs'

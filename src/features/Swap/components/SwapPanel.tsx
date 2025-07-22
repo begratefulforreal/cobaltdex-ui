@@ -17,7 +17,7 @@ import {
   CircularProgress,
   Tooltip as ChakraTip
 } from '@chakra-ui/react'
-import { ApiV3Token, SOL_INFO, SOLMint, TokenInfo, TransferFeeDataBaseType, PONZIMONMint } from 'bifido-sdk'
+import { ApiV3Token, SOL_INFO, SOLMint, TokenInfo, TransferFeeDataBaseType, PONZIMONMint } from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'

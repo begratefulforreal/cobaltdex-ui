@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react'
 import { useState, useCallback, useEffect } from 'react'
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 import { useTokenAccountStore, useTokenStore } from '@/store'
 import { colors } from '@/theme/cssVariables'
 import { useTranslation } from 'react-i18next'

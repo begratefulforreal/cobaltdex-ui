@@ -12,7 +12,7 @@ import {
   RewardInfoV6,
   Structure,
   SplAccount
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import BN from 'bn.js'
 import { getMintSymbol } from '@/utils/token'

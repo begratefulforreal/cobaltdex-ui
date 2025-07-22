@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { RAYMint, ApiV3Token } from 'bifido-sdk'
+import { RAYMint, ApiV3Token } from 'cobaltdex-sdk'
 
 import { useTokenAccountStore, useTokenStore } from '@/store'
 import useFarmPositions from '@/hooks/portfolio/farm/useFarmPositions'

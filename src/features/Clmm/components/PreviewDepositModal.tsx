@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ApiV3PoolInfoConcentratedItem } from 'bifido-sdk'
+import { ApiV3PoolInfoConcentratedItem } from 'cobaltdex-sdk'
 import {
   Box,
   Flex,

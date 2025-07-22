@@ -1,5 +1,5 @@
 import { Box, Flex, HStack, Spacer, Text, VStack } from '@chakra-ui/react'
-import { ApiV3PoolInfoItem, solToWSol } from 'bifido-sdk'
+import { ApiV3PoolInfoItem, solToWSol } from 'cobaltdex-sdk'
 
 import Button from '@/components/Button'
 import EditIcon from '@/icons/misc/EditIcon'

@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from 'react'
-import { FarmPositionData } from 'bifido-sdk'
+import { FarmPositionData } from 'cobaltdex-sdk'
 import useSWR from 'swr'
 import shallow from 'zustand/shallow'
 import axios from '@/api/axios'

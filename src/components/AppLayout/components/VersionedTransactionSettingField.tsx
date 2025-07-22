@@ -1,5 +1,5 @@
 import { Switch } from '@chakra-ui/react'
-import { TxVersion } from 'bifido-sdk'
+import { TxVersion } from 'cobaltdex-sdk'
 import { useAppStore } from '@/store/useAppStore'
 import { SettingField } from './SettingField'
 import { useTranslation } from 'react-i18next'

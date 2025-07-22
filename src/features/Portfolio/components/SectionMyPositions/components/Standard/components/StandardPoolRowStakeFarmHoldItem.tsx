@@ -1,5 +1,5 @@
 import { Box, HStack, Text } from '@chakra-ui/react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 import { colors } from '@/theme/cssVariables'
 import toPercentString from '@/utils/numberish/toPercentString'
 import { formatCurrency, formatToRawLocaleStr } from '@/utils/numberish/formatter'

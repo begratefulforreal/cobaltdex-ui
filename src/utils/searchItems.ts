@@ -1,4 +1,4 @@
-import { isNumber, MayFunction } from 'bifido-sdk'
+import { isNumber, MayFunction } from 'cobaltdex-sdk'
 import { isObject, isString } from './judges/judgeType'
 import { shakeUndefindedItem } from './shakeUndefindedItem'
 import { shrinkToValue } from './shrinkToValue'

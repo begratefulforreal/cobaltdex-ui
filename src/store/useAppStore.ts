@@ -11,7 +11,7 @@ import {
   TxVersion,
   TokenInfo,
   PONZIMON_INFO
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
 import { Wallet } from '@solana/wallet-adapter-react'

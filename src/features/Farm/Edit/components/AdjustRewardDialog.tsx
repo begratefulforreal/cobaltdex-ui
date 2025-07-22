@@ -16,7 +16,7 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react'
-import { ApiV3Token, wSolToSolToken } from 'bifido-sdk'
+import { ApiV3Token, wSolToSolToken } from 'cobaltdex-sdk'
 import Button from '@/components/Button'
 import CalloutNote from '@/components/CalloutNote'
 import DecimalInput from '@/components/DecimalInput'

@@ -7,7 +7,7 @@ import {
   ApiV3PoolInfoConcentratedItem,
   PositionUtils,
   LockClPositionLayoutV2
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import shallow from 'zustand/shallow'
 import { PublicKey, Connection } from '@solana/web3.js'
 import Decimal from 'decimal.js'

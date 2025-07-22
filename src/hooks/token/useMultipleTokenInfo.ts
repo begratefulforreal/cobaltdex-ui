@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { getTokenInfo } from './api'
 import { useTokenStore } from '@/store/useTokenStore'

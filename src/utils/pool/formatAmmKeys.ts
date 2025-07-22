@@ -1,4 +1,4 @@
-import { liquidityStateV4Layout, MARKET_STATE_LAYOUT_V3, Market, getLiquidityAssociatedAuthority } from 'bifido-sdk'
+import { liquidityStateV4Layout, MARKET_STATE_LAYOUT_V3, Market, getLiquidityAssociatedAuthority } from 'cobaltdex-sdk'
 import { PublicKey, AddressLookupTableAccount, Connection } from '@solana/web3.js'
 import { useAppStore } from '@/store/useAppStore'
 

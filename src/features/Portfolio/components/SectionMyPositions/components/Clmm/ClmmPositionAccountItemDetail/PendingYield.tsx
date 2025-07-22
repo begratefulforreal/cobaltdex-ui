@@ -1,5 +1,5 @@
 import { Flex, HStack, Text } from '@chakra-ui/react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 import Button from '@/components/Button'
 import TokenAvatar from '@/components/TokenAvatar'
 import { colors } from '@/theme/cssVariables'

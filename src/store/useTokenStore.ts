@@ -1,6 +1,6 @@
 import { PublicKey } from '@solana/web3.js'
 import { MintLayout, RawMint } from '@solana/spl-token'
-import { TokenInfo, JupTokenType, ApiV3Token } from 'bifido-sdk'
+import { TokenInfo, JupTokenType, ApiV3Token } from 'cobaltdex-sdk'
 import createStore from './createStore'
 import { useAppStore } from './useAppStore'
 import { getStorageItem, setStorageItem } from '@/utils/localStorage'

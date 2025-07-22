@@ -3,7 +3,7 @@ import { colors } from '@/theme/cssVariables'
 import toApr from '@/utils/numberish/toApr'
 import { formatCurrency, formatToRawLocaleStr } from '@/utils/numberish/formatter'
 import { Box, Text, Tag, Flex } from '@chakra-ui/react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 interface FarmInfoItemProps {
   name: string

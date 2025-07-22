@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Box, Flex, HStack, Link, Spacer, Text, VStack, useDisclosure } from '@chakra-ui/react'
-import { ApiV3PoolInfoItem, ApiV3PoolInfoConcentratedItem, PoolFetchType } from 'bifido-sdk'
+import { ApiV3PoolInfoItem, ApiV3PoolInfoConcentratedItem, PoolFetchType } from 'cobaltdex-sdk'
 import Button from '@/components/Button'
 import PoolSelectDialog from '@/features/Farm/Create/components/PoolSelectDialog'
 import TokenAvatarPair from '@/components/TokenAvatarPair'

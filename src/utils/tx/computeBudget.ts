@@ -1,4 +1,4 @@
-import { SOL_INFO } from 'bifido-sdk'
+import { SOL_INFO } from 'cobaltdex-sdk'
 import { useAppStore } from '@/store'
 import axios from '@/api/axios'
 import { SolanaFeeInfoJson } from '@/type'

@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { getCpLockPda, CpmmLockInfo } from 'bifido-sdk'
+import { getCpLockPda, CpmmLockInfo } from 'cobaltdex-sdk'
 import shallow from 'zustand/shallow'
 import BN from 'bn.js'
 import useSWR from 'swr'

@@ -13,7 +13,7 @@ import useTokenPrice from '@/hooks/token/useTokenPrice'
 import Decimal from 'decimal.js'
 import { useTranslation } from 'react-i18next'
 import { useAppStore } from '@/store'
-import { RAYMint } from 'bifido-sdk'
+import { RAYMint } from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 
 export enum AssetType {

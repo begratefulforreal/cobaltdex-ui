@@ -1,4 +1,4 @@
-import { TokenInfo, ApiV3Token } from 'bifido-sdk'
+import { TokenInfo, ApiV3Token } from 'cobaltdex-sdk'
 import { useTranslation } from 'react-i18next'
 import { useEvent } from '@/hooks/useEvent'
 import { colors } from '@/theme/cssVariables'

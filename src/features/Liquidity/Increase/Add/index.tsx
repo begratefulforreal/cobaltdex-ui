@@ -1,5 +1,5 @@
 import { Flex, HStack, Text, useDisclosure } from '@chakra-ui/react'
-import { ApiV3PoolInfoStandardItem, ApiV3Token, TokenInfo, ApiV3PoolInfoStandardItemCpmm } from 'bifido-sdk'
+import { ApiV3PoolInfoStandardItem, ApiV3Token, TokenInfo, ApiV3PoolInfoStandardItemCpmm } from 'cobaltdex-sdk'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 

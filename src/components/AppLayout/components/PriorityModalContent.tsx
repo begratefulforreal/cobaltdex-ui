@@ -17,7 +17,7 @@ import {
   Tab
 } from '@chakra-ui/react'
 import Decimal from 'decimal.js'
-import { SOLMint } from 'bifido-sdk'
+import { SOLMint } from 'cobaltdex-sdk'
 import { QuestionToolTip } from '@/components/QuestionToolTip'
 import DecimalInput from '@/components/DecimalInput'
 import { colors } from '@/theme/cssVariables'

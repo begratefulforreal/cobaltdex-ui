@@ -1,4 +1,4 @@
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 export type NewRewardInfo = {
   id: string

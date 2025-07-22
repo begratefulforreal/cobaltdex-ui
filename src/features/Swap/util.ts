@@ -1,4 +1,4 @@
-import { SOLMint, WSOLMint } from 'bifido-sdk'
+import { SOLMint, WSOLMint } from 'cobaltdex-sdk'
 import { isClient } from '@/utils/common'
 
 export const isSol = (mint: string) => mint === SOLMint.toBase58()

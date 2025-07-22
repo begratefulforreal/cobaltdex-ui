@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import shallow from 'zustand/shallow'
 import axios from '@/api/axios'
-import { ApiStakePool, FetchPoolParams, ApiV3PageIns } from 'bifido-sdk'
+import { ApiStakePool, FetchPoolParams, ApiV3PageIns } from 'cobaltdex-sdk'
 import { useAppStore } from '@/store'
 
 const fetcher = ([url]: [url: string]) => axios.get<ApiV3PageIns<ApiStakePool>>(url, { skipError: true })

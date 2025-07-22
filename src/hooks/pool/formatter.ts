@@ -1,5 +1,5 @@
 import { PublicKey } from '@solana/web3.js'
-import { ApiV3PoolInfoItem, TickUtils, ApiV3PoolInfoConcentratedItem, ApiV3PoolInfoCountItem, ApiV3Token } from 'bifido-sdk'
+import { ApiV3PoolInfoItem, TickUtils, ApiV3PoolInfoConcentratedItem, ApiV3PoolInfoCountItem, ApiV3Token } from 'cobaltdex-sdk'
 import { getPoolName } from '@/features/Pools/util'
 import { wSolToSolString } from '@/utils/token'
 import { toTotalPercent } from '@/utils/numberish/toPercentString'
@@ -13,7 +13,7 @@ import dayjs from 'dayjs'
 // Helper function to fix PONZIMON token data
 const fixPonzimonTokenData = (token: ApiV3Token): ApiV3Token => {
   const PONZIMON_MINT = 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM'
-  
+
   if (token.address === PONZIMON_MINT) {
     return {
       ...token,
@@ -23,7 +23,7 @@ const fixPonzimonTokenData = (token: ApiV3Token): ApiV3Token => {
       decimals: 6
     }
   }
-  
+
   return token
 }
 

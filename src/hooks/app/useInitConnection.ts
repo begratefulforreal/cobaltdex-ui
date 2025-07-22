@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useMemo } from 'react'
 import { PublicKey, Transaction, VersionedTransaction } from '@solana/web3.js'
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
-import { TxVersion, validateAndParsePublicKey, txToBase64 } from 'bifido-sdk'
+import { TxVersion, validateAndParsePublicKey, txToBase64 } from 'cobaltdex-sdk'
 import { useAppStore, defaultEndpoint } from '@/store/useAppStore'
 import usePrevious from '@/hooks/usePrevious'
 import shallow from 'zustand/shallow'

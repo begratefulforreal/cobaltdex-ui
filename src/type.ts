@@ -1,4 +1,4 @@
-import { RaydiumApiBatchRequestParams } from 'bifido-sdk'
+import { RaydiumApiBatchRequestParams } from 'cobaltdex-sdk'
 
 export type SSRData = Omit<RaydiumApiBatchRequestParams, 'api'>
 export type ValueOf<T> = T[keyof T]

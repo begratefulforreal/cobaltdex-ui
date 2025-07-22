@@ -1,7 +1,7 @@
 import { shrinkToValue } from '@/utils/shrinkToValue'
 import { ButtonProps as ChakraButtonProps, Button as ChakraButton } from '@chakra-ui/react'
 import { forwardRef } from 'react'
-import { MayArray, MayFunction } from 'bifido-sdk'
+import { MayArray, MayFunction } from 'cobaltdex-sdk'
 
 /**
  * migrated from V2, and have pre-defined style

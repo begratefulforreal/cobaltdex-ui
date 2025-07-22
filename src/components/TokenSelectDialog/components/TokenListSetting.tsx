@@ -1,5 +1,5 @@
 import { Box, Divider, Grid, GridItem, Text, HStack, Switch } from '@chakra-ui/react'
-import { JupTokenType } from 'bifido-sdk'
+import { JupTokenType } from 'cobaltdex-sdk'
 import { useEvent } from '@/hooks/useEvent'
 import { useAppStore, useTokenStore, USER_ADDED_KEY } from '@/store'
 import { colors } from '@/theme/cssVariables'

@@ -20,7 +20,7 @@ import {
   TxVersion,
   getTransferAmountFeeV2,
   ClmmLockAddress
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import { PublicKey, VersionedTransaction } from '@solana/web3.js'
 import createStore from '@/store/createStore'
 import { useAppStore, useTokenAccountStore, useLiquidityStore } from '@/store'
@@ -301,7 +301,7 @@ export const useClmmStore = createStore<ClmmState>(
         if (!connection) return { txId: '' }
 
         const computeBudgetConfig = await getComputeBudgetConfig()
-        
+
         const buildData = await raydium.clmm.openPositionFromBase({
           poolInfo,
           poolKeys,

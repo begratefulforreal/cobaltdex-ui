@@ -22,7 +22,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CpmmLockData } from '@/hooks/portfolio/cpmm/useLockCpmmBalance'
 import { getFirstNonZeroDecimal } from '@/utils/numberish/formatter'
-import { ApiV3PoolInfoStandardItemCpmm } from 'bifido-sdk'
+import { ApiV3PoolInfoStandardItemCpmm } from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import BN from 'bn.js'
 export default function ClaimFeesModal({

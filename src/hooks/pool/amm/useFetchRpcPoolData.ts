@@ -1,5 +1,5 @@
 import { Connection } from '@solana/web3.js'
-import { fetchMultipleInfo, AmmV4Keys, AmmV5Keys } from 'bifido-sdk'
+import { fetchMultipleInfo, AmmV4Keys, AmmV5Keys } from 'cobaltdex-sdk'
 import { useAppStore } from '@/store'
 import { MINUTE_MILLISECONDS } from '@/utils/date'
 import useSWR from 'swr'

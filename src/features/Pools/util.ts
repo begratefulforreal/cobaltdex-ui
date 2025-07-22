@@ -1,4 +1,4 @@
-import { ApiV3PoolInfoItem, ApiV3PoolInfoCountItem, TokenInfo } from 'bifido-sdk'
+import { ApiV3PoolInfoItem, ApiV3PoolInfoCountItem, TokenInfo } from 'cobaltdex-sdk'
 
 import { isClient } from '@/utils/common'
 import { formatLocaleStr } from '@/utils/numberish/formatter'

@@ -1,4 +1,4 @@
-import { updateReqHistory } from 'bifido-sdk'
+import { updateReqHistory } from 'cobaltdex-sdk'
 import { toastSubject } from '@/hooks/toast/useGlobalToast'
 import i18n from '@/i18n'
 import axios from 'axios'

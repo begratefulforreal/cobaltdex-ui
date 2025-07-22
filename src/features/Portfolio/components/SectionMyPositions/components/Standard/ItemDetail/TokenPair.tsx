@@ -1,5 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react'
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 
 import TokenAvatarPair from '@/components/TokenAvatarPair'
 import { colors } from '@/theme/cssVariables'

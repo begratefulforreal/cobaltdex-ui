@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { PositionInfoLayout } from 'bifido-sdk'
+import { PositionInfoLayout } from 'cobaltdex-sdk'
 import shallow from 'zustand/shallow'
 import { PublicKey, Connection } from '@solana/web3.js'
 import useSWR from 'swr'

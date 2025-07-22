@@ -10,7 +10,7 @@ import LockedNFTModal from './components/LockedNFTModal'
 import useLockableCpmmLp from '@/hooks/portfolio/cpmm/useLockableCpmmLp'
 import { MintData } from '@/hooks/token/useFetchAccLpMint'
 import { useLiquidityStore, useTokenAccountStore } from '@/store'
-import { ApiV3PoolInfoStandardItemCpmm, CpmmLockExtInfo } from 'bifido-sdk'
+import { ApiV3PoolInfoStandardItemCpmm, CpmmLockExtInfo } from 'cobaltdex-sdk'
 import BN from 'bn.js'
 
 export default function Lock() {

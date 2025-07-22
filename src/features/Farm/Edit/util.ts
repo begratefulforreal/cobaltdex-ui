@@ -1,4 +1,4 @@
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 import { FormattedRewardInfoV6 } from '@/hooks/farm/type'
 import { FormattedPoolReward } from '@/hooks/pool/type'
 import { parseDateInfo } from '@/utils/date'

@@ -1,4 +1,4 @@
-import { RAYMint } from 'bifido-sdk'
+import { RAYMint } from 'cobaltdex-sdk'
 import { Flex, Text, Link, Button, Skeleton } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import StandardPoolRowItem from './components/Standard/StandardPoolRowItem'

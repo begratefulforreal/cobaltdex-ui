@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import useSWR from 'swr'
 import shallow from 'zustand/shallow'
-import { ApiV3Token, getAssociatedLedgerAccount } from 'bifido-sdk'
+import { ApiV3Token, getAssociatedLedgerAccount } from 'cobaltdex-sdk'
 import { Connection, PublicKey } from '@solana/web3.js'
 
 import { useAppStore } from '@/store'

@@ -1,5 +1,5 @@
 import { ChangeEvent, useCallback, useEffect, useMemo, useState, useRef, forwardRef, useImperativeHandle } from 'react'
-import { TokenInfo, WSOLMint } from 'bifido-sdk'
+import { TokenInfo, WSOLMint } from 'cobaltdex-sdk'
 import { useTranslation } from 'react-i18next'
 import { PublicKey } from '@solana/web3.js'
 import { useEvent } from '@/hooks/useEvent'

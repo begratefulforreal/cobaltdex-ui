@@ -12,7 +12,7 @@ import {
   Text,
   Box
 } from '@chakra-ui/react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 import Tabs from '@/components/Tabs'
 import TokenAvatarPair from '@/components/TokenAvatarPair'

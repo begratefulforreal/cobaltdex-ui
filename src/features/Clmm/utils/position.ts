@@ -1,4 +1,4 @@
-import { UserPositionAccount, Price } from 'bifido-sdk'
+import { UserPositionAccount, Price } from 'cobaltdex-sdk'
 import Decimal from 'decimal.js'
 
 export const checkYielding = (tokenPrice: Record<string, Price>, position?: UserPositionAccount) => {

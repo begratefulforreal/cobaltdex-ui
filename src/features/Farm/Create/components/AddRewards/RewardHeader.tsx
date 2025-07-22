@@ -3,7 +3,7 @@ import DeleteIcon from '@/icons/misc/DeleteIcon'
 import EditIcon from '@/icons/misc/EditIcon'
 import { colors } from '@/theme/cssVariables'
 import { Box, Flex, Grid, GridItem, HStack, Highlight, Text } from '@chakra-ui/react'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 type RewardHeaderProps = {
   index: number

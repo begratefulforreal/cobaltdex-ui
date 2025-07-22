@@ -1,6 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 
 import { colors } from '@/theme/cssVariables'
 import { formatCurrency } from '@/utils/numberish/formatter'

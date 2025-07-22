@@ -7,7 +7,7 @@ import {
   ApiV3PoolInfoConcentratedItem,
   U64_IGNORE_RANGE,
   ApiV3Token
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import { AccountInfo } from '@solana/web3.js'
 import useTokenPrice from '@/hooks/token/useTokenPrice'
 import useSubscribeClmmInfo, { RpcPoolData } from './useSubscribeClmmInfo'

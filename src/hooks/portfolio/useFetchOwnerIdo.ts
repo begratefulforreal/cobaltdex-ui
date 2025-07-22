@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { PublicKey } from '@solana/web3.js'
-import { OwnerIdoInfo } from 'bifido-sdk'
+import { OwnerIdoInfo } from 'cobaltdex-sdk'
 import useSWR from 'swr'
 import shallow from 'zustand/shallow'
 import axios from '@/api/axios'

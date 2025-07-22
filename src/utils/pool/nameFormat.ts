@@ -1,4 +1,4 @@
-import { ApiV3Token } from 'bifido-sdk'
+import { ApiV3Token } from 'cobaltdex-sdk'
 import { wSolToSolString } from '@/utils/token'
 
 export const transformSymbol = (symbols: ApiV3Token[]) => {

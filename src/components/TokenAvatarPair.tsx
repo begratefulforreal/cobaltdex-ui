@@ -1,5 +1,5 @@
 import { Flex, FlexProps } from '@chakra-ui/react'
-import { ApiV3Token, TokenInfo } from 'bifido-sdk'
+import { ApiV3Token, TokenInfo } from 'cobaltdex-sdk'
 import TokenAvatar, { TokenAvatarSize } from './TokenAvatar'
 
 type RawTokenAvatarPairProps = {

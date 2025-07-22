@@ -1,5 +1,5 @@
 import { Connection } from '@solana/web3.js'
-import { CpmmPoolInfoLayout } from 'bifido-sdk'
+import { CpmmPoolInfoLayout } from 'cobaltdex-sdk'
 import { useAppStore } from '@/store'
 import { MINUTE_MILLISECONDS } from '@/utils/date'
 import useSWR from 'swr'

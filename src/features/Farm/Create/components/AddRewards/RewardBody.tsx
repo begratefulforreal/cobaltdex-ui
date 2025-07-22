@@ -1,7 +1,7 @@
 import TokenInput from '@/components/TokenInput'
 import { colors } from '@/theme/cssVariables'
 import { Box, Flex, HStack, Text, useDisclosure } from '@chakra-ui/react'
-import { ApiV3Token, TokenInfo } from 'bifido-sdk'
+import { ApiV3Token, TokenInfo } from 'cobaltdex-sdk'
 import { useMemo } from 'react'
 
 import { useEvent } from '@/hooks/useEvent'

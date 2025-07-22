@@ -15,7 +15,7 @@ import {
   ModalOverlay,
   HStack
 } from '@chakra-ui/react'
-import { solToWSol } from 'bifido-sdk'
+import { solToWSol } from 'cobaltdex-sdk'
 import shallow from 'zustand/shallow'
 
 import { FormattedPoolInfoConcentratedItem } from '@/hooks/pool/type'

@@ -23,7 +23,7 @@ import {
   VStack,
   Badge
 } from '@chakra-ui/react'
-import { ApiV3Token, TokenInfo } from 'bifido-sdk'
+import { ApiV3Token, TokenInfo } from 'cobaltdex-sdk'
 import React from 'react'
 import useTokenPrice from '@/hooks/token/useTokenPrice'
 import { useTranslation } from 'react-i18next'

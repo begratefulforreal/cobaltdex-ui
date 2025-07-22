@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 import { useMemo } from 'react'
-import { eq } from 'bifido-sdk'
+import { eq } from 'cobaltdex-sdk'
 import { AprData } from '@/features/Clmm/utils/calApr'
 import { aprColors, emptyAprColor } from './PoolListItemAprLine'
 

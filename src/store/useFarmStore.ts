@@ -11,7 +11,7 @@ import {
   ApiStakePool,
   CreateFarmExtInfo,
   IdoKeysData
-} from 'bifido-sdk'
+} from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { toastSubject } from '@/hooks/toast/useGlobalToast'
 import { txStatusSubject } from '@/hooks/toast/useTxStatus'

@@ -1,4 +1,4 @@
-import { ApiV3Token, FormatFarmInfoOut, FormatFarmInfoOutV345, FormatFarmInfoOutV6, RewardInfoV345, RewardInfoV6 } from 'bifido-sdk'
+import { ApiV3Token, FormatFarmInfoOut, FormatFarmInfoOutV345, FormatFarmInfoOutV6, RewardInfoV345, RewardInfoV6 } from 'cobaltdex-sdk'
 import { FarmDecodeData } from './farmUtils'
 export enum FarmType {
   Raydium = 'Raydium',

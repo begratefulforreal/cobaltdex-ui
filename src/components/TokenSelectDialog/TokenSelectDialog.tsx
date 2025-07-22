@@ -1,5 +1,5 @@
 import { useState, useCallback, forwardRef } from 'react'
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 import { useTranslation } from 'react-i18next'
 import { useEvent } from '@/hooks/useEvent'
 import ChevronLeftIcon from '@/icons/misc/ChevronLeftIcon'

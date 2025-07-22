@@ -1,5 +1,5 @@
 import { useState, useImperativeHandle, useCallback, RefObject } from 'react'
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 import ExistFarmingRewardItem from './FarmingRewardItem'
 import { EditReward } from '../util'
 

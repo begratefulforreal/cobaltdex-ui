@@ -1,4 +1,4 @@
-import { TickUtils, ApiV3PoolInfoConcentratedItem } from 'bifido-sdk'
+import { TickUtils, ApiV3PoolInfoConcentratedItem } from 'cobaltdex-sdk'
 import Decimal from 'decimal.js'
 
 export function getPriceBoundary({ baseIn, poolInfo }: { baseIn: boolean; poolInfo: ApiV3PoolInfoConcentratedItem }):

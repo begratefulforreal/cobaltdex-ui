@@ -1,4 +1,4 @@
-import { TxVersion, solToWSol } from 'bifido-sdk'
+import { TxVersion, solToWSol } from 'cobaltdex-sdk'
 import axios from '@/api/axios'
 import { useAppStore } from '@/store'
 import { useSwapStore } from './useSwapStore'

@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import useSWR, { KeyedMutator } from 'swr'
 import shallow from 'zustand/shallow'
-import { FormatFarmInfoOut } from 'bifido-sdk'
+import { FormatFarmInfoOut } from 'cobaltdex-sdk'
 import { AxiosResponse } from 'axios'
 
 import axios from '@/api/axios'

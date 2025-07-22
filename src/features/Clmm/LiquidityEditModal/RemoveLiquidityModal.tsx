@@ -27,7 +27,7 @@ import {
   ModalOverlay,
   Text
 } from '@chakra-ui/react'
-import { ApiV3PoolInfoConcentratedItem } from 'bifido-sdk'
+import { ApiV3PoolInfoConcentratedItem } from 'cobaltdex-sdk'
 import IntervalCircle, { IntervalCircleHandler } from '@/components/IntervalCircle'
 import { SlippageAdjuster } from '@/components/SlippageAdjuster'
 import { SlippageSettingField } from '@/components/SlippageAdjuster/SlippageSettingField'

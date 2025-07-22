@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Badge, Box, Button, Flex, Grid, GridItem, HStack, SimpleGrid, Tag, Text, VStack, useDisclosure } from '@chakra-ui/react'
-import { TokenInfo } from 'bifido-sdk'
+import { TokenInfo } from 'cobaltdex-sdk'
 
 import TokenAvatar from '@/components/TokenAvatar'
 import { useEvent } from '@/hooks/useEvent'

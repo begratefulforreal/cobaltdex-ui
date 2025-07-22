@@ -1,4 +1,4 @@
-import { TokenInfo, Price } from 'bifido-sdk'
+import { TokenInfo, Price } from 'cobaltdex-sdk'
 
 interface Props {
   tokenInput: TokenInfo

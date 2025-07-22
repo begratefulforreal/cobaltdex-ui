@@ -1,4 +1,4 @@
-import { ApiV3PoolInfoConcentratedItem, PoolUtils, ApiV3Token } from 'bifido-sdk'
+import { ApiV3PoolInfoConcentratedItem, PoolUtils, ApiV3Token } from 'cobaltdex-sdk'
 import { ClmmPosition } from '@/hooks/portfolio/clmm/useClmmBalance'
 import { TokenPrice } from '@/hooks/token/useTokenPrice'
 import { AprKey } from '@/hooks/pool/type'

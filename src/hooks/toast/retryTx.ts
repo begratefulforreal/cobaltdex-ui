@@ -3,7 +3,7 @@ import { parseUserAgent } from 'react-device-detect'
 import { retry, idToIntervalRecord, cancelRetry } from '@/utils/common'
 import { useAppStore } from '@/store'
 import axios from '@/api/axios'
-import { txToBase64 } from 'bifido-sdk'
+import { txToBase64 } from 'cobaltdex-sdk'
 
 const retryRecord = new Map<
   string,

@@ -20,7 +20,7 @@ import {
   VStack,
   useDisclosure
 } from '@chakra-ui/react'
-import { ApiV3Token, TokenInfo } from 'bifido-sdk'
+import { ApiV3Token, TokenInfo } from 'cobaltdex-sdk'
 import dayjs from 'dayjs'
 import Decimal from 'decimal.js'
 import { useMemo, useState } from 'react'

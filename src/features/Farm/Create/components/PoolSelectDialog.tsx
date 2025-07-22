@@ -14,7 +14,7 @@ import {
   Skeleton,
   Text
 } from '@chakra-ui/react'
-import { ApiV3Token, PoolFetchType } from 'bifido-sdk'
+import { ApiV3Token, PoolFetchType } from 'cobaltdex-sdk'
 import { useCallback, useState } from 'react'
 
 import { FormattedPoolInfoItem } from '@/hooks/pool/type'

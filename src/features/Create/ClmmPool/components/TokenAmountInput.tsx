@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Button, HStack, Text, VStack } from '@chakra-ui/react'
-import { ApiV3PoolInfoConcentratedItem } from 'bifido-sdk'
+import { ApiV3PoolInfoConcentratedItem } from 'cobaltdex-sdk'
 
 import { useTranslation } from 'react-i18next'
 import TokenAvatar from '@/components/TokenAvatar'

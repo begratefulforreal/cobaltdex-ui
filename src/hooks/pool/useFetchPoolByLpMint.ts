@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { ApiV3PoolInfoStandardItem, FetchPoolParams } from 'bifido-sdk'
+import { ApiV3PoolInfoStandardItem, FetchPoolParams } from 'cobaltdex-sdk'
 import useSWR, { KeyedMutator } from 'swr'
 import shallow from 'zustand/shallow'
 import { AxiosResponse } from 'axios'
