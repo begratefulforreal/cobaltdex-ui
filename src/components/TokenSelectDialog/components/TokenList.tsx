@@ -26,7 +26,7 @@ const perPage = 30
 
 const USDCMint = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'
 const SOLMint = PublicKey.default.toString()
-const RAYMint = '4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R'
+const PENGUMint = '2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv'
 const METAVMint = 'HCgvbV9Qcf9TVGPGKMGbVEj8WwwVD6HhTt5E2i3qkeN9'
 const USDTMint = 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB'
 
@@ -150,11 +150,11 @@ export default forwardRef<
 
   const USDC = useMemo(() => orgTokenMap.get(USDCMint), [orgTokenMap])
   const SOL = useMemo(() => orgTokenMap.get(SOLMint), [orgTokenMap])
-  const RAY = useMemo(() => orgTokenMap.get(RAYMint), [orgTokenMap])
+  const PENGU = useMemo(() => orgTokenMap.get(PENGUMint), [orgTokenMap])
   const USDT = useMemo(() => orgTokenMap.get(USDTMint), [orgTokenMap])
 
-  const [usdcDisabled, solDisabled, rayDisabled, usdtDisabled] = filterFn
-    ? [!USDC || !filterFn(USDC), !SOL || !filterFn(SOL), !RAY || !filterFn(RAY), !USDT || !filterFn(USDT)]
+  const [usdcDisabled, solDisabled, penguDisabled, usdtDisabled] = filterFn
+    ? [!USDC || !filterFn(USDC), !SOL || !filterFn(SOL), !PENGU || !filterFn(PENGU), !USDT || !filterFn(USDT)]
     : [false, false, false, false]
 
   const renderTokenItem = useCallback(
@@ -201,7 +201,7 @@ export default forwardRef<
         <SimpleGrid gridTemplateColumns={'repeat(auto-fill, minmax(80px, 1fr))'} gap={3}>
           <PopularTokenCell token={USDC} onClick={(token) => onChooseToken(token)} disabled={usdcDisabled} />
           <PopularTokenCell token={SOL} onClick={(token) => onChooseToken(token)} disabled={solDisabled} />
-          <PopularTokenCell token={RAY} onClick={(token) => onChooseToken(token)} disabled={rayDisabled} />
+          <PopularTokenCell token={PENGU} onClick={(token) => onChooseToken(token)} disabled={penguDisabled} />
           <PopularTokenCell token={USDT} onClick={(token) => onChooseToken(token)} disabled={usdtDisabled} />
         </SimpleGrid>
       </Box>
