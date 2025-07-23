@@ -87,7 +87,9 @@ export function SwapInfoBoard({
             color={isHighRiskPrice ? colors.semanticError : priceImpact > 1 ? colors.semanticWarning : colors.textSecondary}
             fontWeight={500}
           >
-            {computedSwapResult ? `${formatToRawLocaleStr(toPercentString(computedSwapResult.antisniperFee, { notShowZero: true }))}` : '-'}
+            {computedSwapResult && computedSwapResult.antisniperFee > 0
+              ? `${formatToRawLocaleStr(toPercentString(computedSwapResult.antisniperFee, { notShowZero: true }))}`
+              : '-'}
           </Text>
         </HStack>
         <HStack gap={4} py={1} justifyContent="space-between">
