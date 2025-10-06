@@ -11,15 +11,15 @@ import Decimal from 'decimal.js'
 import dayjs from 'dayjs'
 
 // Helper function to fix PONZIMON token data
-const fixPonzimonTokenData = (token: ApiV3Token): ApiV3Token => {
-  const PONZIMON_MINT = 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM'
+const fixHerbTokenData = (token: ApiV3Token): ApiV3Token => {
+  const HERM_MINT = 'hernppSU7wTTUYGryTTUqXRwW5dCdWgqPotMumdDrWf'
 
-  if (token.address === PONZIMON_MINT) {
+  if (token.address === HERM_MINT) {
     return {
       ...token,
-      symbol: 'POKE',
-      name: 'Ponzimon',
-      logoURI: 'https://wsrv.nl/?fit=cover&w=48&h=48&url=https://ipfs.io/ipfs/bafkreiczootiz3lfyco3wgirho6izqacmgcvpkf5bt5olfi6mvpsnbnkvu',
+      symbol: 'HERB',
+      name: 'Herb',
+      logoURI: 'https://ipfs.io/ipfs/bafkreic4o5cj5pwg3xt25w2ruhplqb5jsjt5q2ypwdoipqky7qo3jebebu',
       decimals: 6
     }
   }
@@ -65,7 +65,7 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
             .map((r, idx) => ({
               apr: r,
               percent: toTotalPercent(r, aprData.apr ?? 0),
-              token: { ...fixPonzimonTokenData(pool.rewardDefaultInfos[idx].mint) }
+              token: { ...fixHerbTokenData(pool.rewardDefaultInfos[idx].mint) }
             }))
         ]
       }
@@ -78,7 +78,7 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
   )
 
   const weeklyRewards = pool.rewardDefaultInfos.map((r) => {
-    const fixedMint = fixPonzimonTokenData(r.mint)
+    const fixedMint = fixHerbTokenData(r.mint)
     const amount = new Decimal(r.perSecond || 0).mul(60 * 60 * 24 * 7).div(10 ** fixedMint.decimals)
     return {
       orgAmount: amount.toString(),
@@ -121,8 +121,8 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
       ongoing,
       ended,
       mint: {
-        ...fixPonzimonTokenData(r.mint),
-        symbol: getMintSymbol({ mint: fixPonzimonTokenData(r.mint), transformSol: true })
+        ...fixHerbTokenData(r.mint),
+        symbol: getMintSymbol({ mint: fixHerbTokenData(r.mint), transformSol: true })
       }
     }
   })
@@ -143,12 +143,12 @@ export function formatPoolData(pool: ApiV3PoolInfoItem): FormattedPoolInfoItem {
     recommendDecimal,
     isOpenBook: pool.pooltype.includes('OpenBookMarket'),
     mintA: {
-      ...fixPonzimonTokenData(pool.mintA),
-      symbol: wSolToSolString(fixPonzimonTokenData(pool.mintA).symbol) || pool.mintA.address.substring(0, 6)
+      ...fixHerbTokenData(pool.mintA),
+      symbol: wSolToSolString(fixHerbTokenData(pool.mintA).symbol) || pool.mintA.address.substring(0, 6)
     },
     mintB: {
-      ...fixPonzimonTokenData(pool.mintB),
-      symbol: wSolToSolString(fixPonzimonTokenData(pool.mintB).symbol) || pool.mintB.address.substring(0, 6)
+      ...fixHerbTokenData(pool.mintB),
+      symbol: wSolToSolString(fixHerbTokenData(pool.mintB).symbol) || pool.mintB.address.substring(0, 6)
     },
     weeklyRewards,
     allApr,

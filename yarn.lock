@@ -9595,10 +9595,10 @@ clsx@^2.1.0, clsx@^2.1.1:
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
   integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
-cobaltdex-sdk@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/cobaltdex-sdk/-/cobaltdex-sdk-0.0.2.tgz#2c8d18e7b4501315911fe5c4a5c724961a33ed92"
-  integrity sha512-7ktAID1sM+7zCrSxat10vN3KhMBsNg1qa2uxlLcsRxDU7eb65OGx4cTr02wIIQ2oVLlxdjf37BwDhY+qFonl7Q==
+cobaltdex-sdk@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/cobaltdex-sdk/-/cobaltdex-sdk-0.0.4.tgz#24c6b86e54f90ab0550a8d1cc85929155c9482d0"
+  integrity sha512-0NQdsGe0A5abLJwCt0zcU1eI0CqOWvDngMvNrcu91XTZOavaXRD/O1P+iL28RJyEXHcWo49hdG3AjUSfQYAYFw==
   dependencies:
     "@coral-xyz/anchor" "^0.31.1"
     "@solana/spl-token" "^0.4.8"

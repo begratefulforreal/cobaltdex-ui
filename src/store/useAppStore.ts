@@ -234,14 +234,14 @@ export const useAppStore = createStore<AppState>(
         action
       )
 
-      const ponzimonToken = {
+      const herbToken = {
         chainId: 101,
-        address: 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM',
+        address: 'hernppSU7wTTUYGryTTUqXRwW5dCdWgqPotMumdDrWf',
         programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
         decimals: 6,
-        symbol: 'POKE',
-        name: 'Ponzimon',
-        logoURI: `https://wsrv.nl/?fit=cover&w=48&h=48&url=https://ipfs.io/ipfs/bafkreiczootiz3lfyco3wgirho6izqacmgcvpkf5bt5olfi6mvpsnbnkvu`,
+        symbol: 'HERB',
+        name: 'Herb',
+        logoURI: `https://ipfs.io/ipfs/bafkreic4o5cj5pwg3xt25w2ruhplqb5jsjt5q2ypwdoipqky7qo3jebebu`,
         tags: [],
         extensions: {},
         priority: 2,
@@ -258,14 +258,14 @@ export const useAppStore = createStore<AppState>(
       }
 
       // Always override
-      currentTokenMap.set(ponzimonToken.address, ponzimonToken as any)
-      currentMintGroup.official.add(ponzimonToken.address)
+      currentTokenMap.set(herbToken.address, herbToken as any)
+      currentMintGroup.official.add(herbToken.address)
 
-      const existingIndex = currentTokenList.findIndex((t) => t.address === ponzimonToken.address)
+      const existingIndex = currentTokenList.findIndex((t) => t.address === herbToken.address)
       if (existingIndex >= 0) {
-        currentTokenList[existingIndex] = ponzimonToken as any
+        currentTokenList[existingIndex] = herbToken as any
       } else {
-        currentTokenList.push(ponzimonToken as any)
+        currentTokenList.push(herbToken as any)
       }
 
       // Update the store immediately

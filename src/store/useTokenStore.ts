@@ -140,14 +140,14 @@ export const useTokenStore = createStore<TokenStore>(
           action
         )
 
-        const ponzimonToken = {
+        const herbToken = {
           chainId: 101,
-          address: 'mPtPbojNDpmpySrLUWmfiVZmSxSUCXhPQuREu3DZ1hM',
+          address: 'hernppSU7wTTUYGryTTUqXRwW5dCdWgqPotMumdDrWf',
           programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
           decimals: 6,
-          symbol: 'POKE',
-          name: 'Ponzimon',
-          logoURI: `https://wsrv.nl/?fit=cover&w=48&h=48&url=https://ipfs.io/ipfs/bafkreiczootiz3lfyco3wgirho6izqacmgcvpkf5bt5olfi6mvpsnbnkvu`,
+          symbol: 'HERB',
+          name: 'Herb',
+          logoURI: `https://ipfs.io/ipfs/bafkreic4o5cj5pwg3xt25w2ruhplqb5jsjt5q2ypwdoipqky7qo3jebebu`,
           tags: [],
           extensions: {},
           priority: 2,
@@ -164,19 +164,19 @@ export const useTokenStore = createStore<TokenStore>(
         }
 
         // ALWAYS override PONZIMON with correct metadata
-        const existingToken = newTokenMap.get(ponzimonToken.address)
+        const existingToken = newTokenMap.get(herbToken.address)
 
         // Force set the token (overwrites any existing data)
-        newTokenMap.set(ponzimonToken.address, ponzimonToken)
-        newMintGroup.official.add(ponzimonToken.address)
+        newTokenMap.set(herbToken.address, herbToken)
+        newMintGroup.official.add(herbToken.address)
 
         // Update or add to token list
-        const tokenIndex = newTokenList.findIndex((t) => t.address === ponzimonToken.address)
+        const tokenIndex = newTokenList.findIndex((t) => t.address === herbToken.address)
         if (tokenIndex >= 0) {
-          newTokenList[tokenIndex] = ponzimonToken
+          newTokenList[tokenIndex] = herbToken
           console.log('🔄 Updated PONZIMON in token list at index:', tokenIndex)
         } else {
-          newTokenList.push(ponzimonToken)
+          newTokenList.push(herbToken)
           console.log('✅ Added PONZIMON to token list, new length:', newTokenList.length)
         }
 

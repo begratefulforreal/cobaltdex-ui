@@ -17,7 +17,7 @@ import {
   CircularProgress,
   Tooltip as ChakraTip
 } from '@chakra-ui/react'
-import { ApiV3Token, SOL_INFO, SOLMint, TokenInfo, TransferFeeDataBaseType, PONZIMONMint } from 'cobaltdex-sdk'
+import { ApiV3Token, SOL_INFO, SOLMint, TokenInfo, TransferFeeDataBaseType, HERBMint } from 'cobaltdex-sdk'
 import { PublicKey } from '@solana/web3.js'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -77,7 +77,7 @@ export function SwapPanel({
   const [inputMint, setInputMint] = useState<string>(SOLMint.toBase58())
   const [swapType, setSwapType] = useState<'BaseIn' | 'BaseOut'>('BaseIn')
 
-  const [outputMint, setOutputMint] = useState<string>(PONZIMONMint.toBase58())
+  const [outputMint, setOutputMint] = useState<string>(HERBMint.toBase58())
   const [tokenInput, tokenOutput] = [tokenMap.get(inputMint), tokenMap.get(outputMint)]
 
   const [cacheLoaded, setCacheLoaded] = useState(false)
