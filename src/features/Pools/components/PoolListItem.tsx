@@ -361,7 +361,7 @@ export default function PoolListItem({
                 </Tooltip>
               </Box>
 
-              <Button variant="outline" size="sm" onClick={onClickDeposit} isDisabled={pool.tvl < 1}>
+              <Button variant="outline" size="sm" onClick={onClickDeposit}>
                 {t('button.deposit')}
               </Button>
             </HStack>
