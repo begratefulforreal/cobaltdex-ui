@@ -13,6 +13,8 @@ interface EventTypeConnectWallet {
 
 export const sendWalletEvent = async (props: EventTypeConnectWallet) => {
   if (isLocal()) return
+  const monitorHost = useAppStore.getState().urlConfigs.MONITOR_BASE_HOST
+  if (!monitorHost) return
   try {
     const deviceInfo = parseUserAgent(window.navigator.userAgent)
     const deviceType = deviceInfo.device.type || 'pc'
@@ -36,6 +38,8 @@ interface EventTypeNetworkError {
 
 export const sendNetworkEvent = async (props: EventTypeNetworkError) => {
   if (isLocal()) return
+  const monitorHost = useAppStore.getState().urlConfigs.MONITOR_BASE_HOST
+  if (!monitorHost) return
   try {
     const deviceInfo = parseUserAgent(window.navigator.userAgent)
     const deviceType = deviceInfo.device.type || 'pc'
