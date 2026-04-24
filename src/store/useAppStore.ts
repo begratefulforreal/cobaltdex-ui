@@ -350,7 +350,7 @@ export const useAppStore = createStore<AppState>(
           const readyRpcs = [...rpcs]
           if (localRpcNode?.rpcNode) readyRpcs.sort((a, b) => (a.name === localRpcNode.rpcNode!.name ? -1 : 1))
           const success = await setRpcUrlAct(
-            'https://mainnet.helius-rpc.com/?api-key=78947ff9-3d63-4e85-a0f2-5c39fa66a3a5',
+            'https://solana-mainnet.core.chainstack.com/390e9c8ba27078293df143004c1c5003',
             true,
             i !== readyRpcs.length - 1
           )
